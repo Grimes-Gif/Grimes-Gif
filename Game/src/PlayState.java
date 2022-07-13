@@ -15,9 +15,8 @@ public class PlayState extends States {
 	}
 	public void input(MouseHandler mouse, KeyHandler key) {
 		player.input(mouse, key);
-
-		
 	}
+
 	public void render(Graphics2D g) {
 		player.render(g);
 	}

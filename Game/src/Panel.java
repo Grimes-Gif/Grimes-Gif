@@ -96,7 +96,6 @@ public class Panel extends JPanel implements Runnable {
 			int thisSecondTime = (int) (lastUpdateTime/1000000000);
 			if(thisSecondTime > lastSecondTime) {
 				if(framecount != oldFrameCount) {
-					System.out.println("New second: " + thisSecondTime + " " + framecount);
 					oldFrameCount = framecount;
 				}
 				lastSecondTime = thisSecondTime;
@@ -107,7 +106,6 @@ public class Panel extends JPanel implements Runnable {
 				Thread.yield();
 				try {
 					Thread.sleep(millis);
-					System.out.println(millis);
 				} catch(Exception e) { 
 					System.out.println("ERROR: yeilding thread");
 				}
@@ -130,8 +128,8 @@ public class Panel extends JPanel implements Runnable {
 		Graphics g2 = (Graphics2D) this.getGraphics();
 		g2.drawImage(img, 0, 0, width, height, null);
 		g2.dispose();
-		
-		
+
+
 	}
 	public void input(MouseHandler mouse, KeyHandler key) {
 		gsm.input(mouse, key);
